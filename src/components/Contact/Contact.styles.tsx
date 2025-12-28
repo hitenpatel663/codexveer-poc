@@ -1,0 +1,190 @@
+import { makeStyles } from '@mui/styles';
+
+export const useStyles = makeStyles(() => ({
+  section: {
+    padding: '5rem 0',
+    backgroundColor: 'white',
+  },
+  sectionTitle: {
+    fontSize: 'clamp(1.875rem, 4vw, 3rem)',
+    fontWeight: 'bold',
+    color: '#111827',
+    textAlign: 'center',
+    opacity: 1,
+    transform: 'translateY(20px)',
+    animation: 'fadeInUp 0.8s ease-out 0.2s forwards',
+  },
+  sectionDescription: {
+    fontSize: '1.125rem',
+    color: '#4b5563',
+    textAlign: 'center',
+    maxWidth: '672px',
+    margin: '0 auto 4rem',
+    opacity: 1,
+    transform: 'translateY(20px)',
+    animation: 'fadeInUp 0.8s ease-out 0.4s forwards',
+  },
+  '@keyframes fadeInUp': {
+    to: {
+      opacity: 1,
+      transform: 'translateY(0)',
+    },
+  },
+  contactGrid: {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+    gap: '3rem',
+    maxWidth: '1152px',
+    margin: '0 auto',
+    marginTop: '6rem',
+  },
+  contactInfo: {
+    marginBottom: '2rem',
+  },
+  contactInfoTitle: {
+    fontSize: '1.5rem',
+    fontWeight: 'bold',
+    color: '#111827',
+    marginBottom: '1.5rem',
+  },
+  contactInfoText: {
+    color: '#4b5563',
+    marginBottom: '2rem',
+    lineHeight: 1.6,
+  },
+  contactItems: {
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '1.5rem',
+  },
+  contactItem: {
+    display: 'flex',
+    alignItems: 'flex-start',
+    gap: '1rem',
+    marginBottom: '1.5rem',
+    transition: 'transform 0.3s ease',
+    '&:hover': {
+      transform: 'translateX(8px)',
+      '& $contactIcon': {
+        transform: 'scale(1.1) rotate(5deg)',
+      },
+    },
+  },
+  contactIcon: {
+    width: '48px',
+    height: '48px',
+    background: 'linear-gradient(to bottom right, #2563eb, #9333ea)',
+    borderRadius: '8px',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexShrink: 0,
+    transition: 'transform 0.3s ease',
+  },
+  contactItemTitle: {
+    fontWeight: 600,
+    color: '#111827',
+    marginBottom: '0.25rem',
+  },
+  contactItemLink: {
+    color: '#2563eb',
+    textDecoration: 'none',
+    '&:hover': {
+      textDecoration: 'underline',
+    },
+  },
+  contactItemText: {
+    color: '#4b5563',
+  },
+  form: {
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '1.5rem',
+  },
+  formGroup: {
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '0.5rem',
+  },
+  formLabel: {
+    fontSize: '0.875rem',
+    fontWeight: 600,
+    color: '#111827',
+  },
+  formInput: {
+    width: '100%',
+    padding: '0.75rem 1rem',
+    border: '1px solid #d1d5db',
+    borderRadius: '8px',
+    fontSize: '1rem',
+    transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+    fontFamily: 'inherit',
+    backgroundColor: 'white',
+    '&:focus': {
+      outline: 'none',
+      borderColor: '#2563eb',
+      boxShadow: '0 0 0 3px rgba(37, 99, 235, 0.1)',
+      transform: 'translateY(-2px)',
+    },
+    '&:hover': {
+      borderColor: '#93c5fd',
+    },
+  },
+  formTextarea: {
+    width: '100%',
+    padding: '0.75rem 1rem',
+    border: '1px solid #d1d5db',
+    borderRadius: '8px',
+    fontSize: '1rem',
+    transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+    fontFamily: 'inherit',
+    resize: 'vertical',
+    minHeight: '120px',
+    backgroundColor: 'white',
+    '&:focus': {
+      outline: 'none',
+      borderColor: '#2563eb',
+      boxShadow: '0 0 0 3px rgba(37, 99, 235, 0.1)',
+      transform: 'translateY(-2px)',
+    },
+    '&:hover': {
+      borderColor: '#93c5fd',
+    },
+  },
+  heroButtonLarge: {
+    background: 'linear-gradient(to right, #2563eb, #9333ea)',
+    color: 'white',
+    padding: '1rem 2rem',
+    borderRadius: '8px',
+    fontWeight: 600,
+    fontSize: '1.125rem',
+    textDecoration: 'none',
+    display: 'inline-block',
+    transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+    border: 'none',
+    cursor: 'pointer',
+    position: 'relative',
+    overflow: 'hidden',
+    '&::before': {
+      content: '""',
+      position: 'absolute',
+      top: 0,
+      left: '-100%',
+      width: '100%',
+      height: '100%',
+      background: 'linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent)',
+      transition: 'left 0.5s',
+    },
+    '&:hover': {
+      transform: 'translateY(-2px) scale(1.02)',
+      boxShadow: '0 20px 25px -5px rgba(37, 99, 235, 0.4), 0 10px 10px -5px rgba(147, 51, 234, 0.2)',
+      '&::before': {
+        left: '100%',
+      },
+    },
+    '&:active': {
+      transform: 'translateY(0) scale(0.98)',
+    },
+  },
+}));
+
